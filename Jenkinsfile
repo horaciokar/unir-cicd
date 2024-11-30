@@ -28,6 +28,13 @@ pipeline {
                 archiveArtifacts artifacts: 'results/*.xml'
             }
         }
+        
+        stage('Unit tests-e2e') {
+            steps {
+                sh 'make test-e2e'
+                archiveArtifacts artifacts: 'results/*.xml'
+            }
+        }
     }
 
     post {
