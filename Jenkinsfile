@@ -25,7 +25,7 @@ pipeline {
         stage('Unit tests-api') {
             steps {
                 sh 'make test-api'
-                archiveArtifacts artifacts: 'resultados/*.xml'
+                archiveArtifacts artifacts: 'results/*.xml'
             }
         }
     }
